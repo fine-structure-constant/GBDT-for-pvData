@@ -1,0 +1,16 @@
+{
+  "input_glob": "*.xlsx",
+  "sheet": "matched_rows",
+  "output_dir": "outputs/pvdelta_v1",
+  "target": "pce_delta_abs",
+  "seed": 20261013,
+  "cv_folds": 5,
+  "single_junction_review_ceiling_pct": 35.0,
+  "delta_tolerance_pp": 0.00001,
+  "stoichiometry_tolerance": 0.03,
+  "gbdt_candidates": [
+    {"n_estimators": 160, "learning_rate": 0.04, "max_depth": 2, "min_samples_leaf": 15, "loss": "huber", "subsample": 0.85},
+    {"n_estimators": 220, "learning_rate": 0.04, "max_depth": 3, "min_samples_leaf": 20, "loss": "huber", "subsample": 0.85},
+    {"n_estimators": 160, "learning_rate": 0.04, "max_depth": 2, "min_samples_leaf": 15, "loss": "squared_error", "subsample": 0.85}
+  ]
+}
